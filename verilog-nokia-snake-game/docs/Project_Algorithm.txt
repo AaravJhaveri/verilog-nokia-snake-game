@@ -1,0 +1,22 @@
+Python Code:
+	using tkinter make a GUI and put it in a function which clears the last frame and re-draws the current frame from the output.txt file
+	call the function the first time
+	listen for key presses or button presses in the GUI
+	if detecting any key press or button press:
+		write either of the inputs (l, r, u, d or a) in the input.txt file.
+		run the verilog file and let it complete its part
+		call the function which draws the GUI again
+
+Verilog Code:
+	Read output.txt file and parse the board (where ".", "H", "S", and "A" are represented by 0, 1, 2 and 3 repectively)
+	Read input.txt file and get the first character and store it in a variable "direction"
+	if the direction is either of "u", "d", "l", "r" and the snake does not collide with the walls or itself:
+		move the head in the direction given direction
+		move the tail of the snake to the previous head position
+	else if the direction is "a" and the snake does not collide with the walls or itself:
+		write the default values keeping the snake at (2,2) and the apple at (11, 11) in the output.txt file
+		finish the code using $finish
+	if the new head coordinates are the same as the apple coordinates:
+		generate a new apple using random numbers such that it does not have the same coordinates as any snake body part
+		increase the snake length by making the coordinates at the snake's tail "2" in the board
+	write the board along with the walls in the output.txt
