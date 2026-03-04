@@ -32,3 +32,8 @@ python GUI.py
 - It writes the input to the `input.txt` file, saves it
 - and according to the content of the `output.txt` it repaints the screen
 - Details given in `Project Algorithm.txt`
+
+## Demo
+
+![Snake Game](snake_game_demo.png)
+
